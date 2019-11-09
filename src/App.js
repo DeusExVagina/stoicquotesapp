@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './App.css';
 
+
 //From: https://codepen.io/zebapy/pen/LGjyWJ
 
 export default class App extends React.Component {
@@ -47,6 +48,10 @@ export default class App extends React.Component {
 
   render() {    
     const { quote } = this.state;    
+    const style = {
+      marginTop: '15px',
+      marginBottom: '20px'
+    };
     return (
       <React.Fragment>
         <div class="notepaper">
