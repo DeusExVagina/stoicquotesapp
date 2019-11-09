@@ -18,7 +18,7 @@ export default class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch("https://raw.githubusercontent.com/DeusExVagina/sexscenegenerator/master/sexscenegenerator/JSONFIles/kissingactions.json")
+    fetch("https://raw.githubusercontent.com/DeusExVagina/stoicquotesapp/master/JSONFIles/quotes.json")
       .then(response => response.json())
       .then(data => {
         this.setState({
