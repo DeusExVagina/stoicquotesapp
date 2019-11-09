@@ -4,6 +4,7 @@ import './App.css';
 
 
 //From: https://codepen.io/zebapy/pen/LGjyWJ
+//source for notepad quote layout: https://codepen.io/Thibaut/pen/xjHef
 
 export default class App extends React.Component {
 
