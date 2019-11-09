@@ -16,23 +16,23 @@ export default class App extends React.Component {
       count: 0
     };
   }
-
   componentDidMount() {
     fetch("https://raw.githubusercontent.com/DeusExVagina/stoicquotesapp/master/JSONFIles/quotes.json")
-      .then(response => response.json())      
+      .then(response => response.json())
       .then(data => {
-        this.setState({          
-          quotes: data.quotes
-        });
-        
-      });      
-  }
-  componentDidUpdate() {
+        this.setState({
+          quotes: data.quotes,
+          quote:getQuote(data.quotes).quote,
+          author:getQuote(data.quotes).author
+          });
+
+      });
+
   }
 
   _randomAll() {
-    var quote = '';   
-    console.log(this.state.quotes.length) 
+    var quote = '';
+    console.log(this.state.quotes.length)
     var quote = getQuote(this.state.quotes).quote;
     var author = getQuote(this.state.quotes).author;
     this.setState({
@@ -45,23 +45,22 @@ export default class App extends React.Component {
 
   };
 
-  render() {
-    const { quote} = this.state;
-
+  render() {    
+    const { quote } = this.state;    
     return (
       <div className="container">
-        <div className="name">
-          <div>
-            {/* <span className="firstname">Stoic Quote Generator</span> */}
-            <br />
-          </div>
-
+        <div class="notepaper">
+          <figure class="quote">
+            <blockquote class="curly-quotes" cite="https://www.youtube.com/watch?v=qYLrc9hy0t0">
+            {this.state.quote}
+            </blockquote>
+            <figcaption class="quote-by">— {this.state.author}</figcaption>
+          </figure>
         </div>
-        <p className="name">{this.state.quote}</p>
-        <div className="firstname">{this.state.author}</div>
         <div className="m-y">
           <button className="btn btn-random" onClick={this._randomAll.bind(this)}>Generate random stoic quote</button>
         </div>
+        
         <small className="randomize-note">Like this thing?</small>
         <Button name="firstName" onClick="https://keypressingmonkey.com">My Website</Button>
         <Button name="lastNamePrefix" onClick="https://www.youtube.com/channel/UCMdFN7FUC4HilpDBEw0uvJw">My Youtube</Button>
