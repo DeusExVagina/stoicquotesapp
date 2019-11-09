@@ -31,10 +31,13 @@ export default class App extends React.Component {
   }
 
   _randomAll() {
-    var quote = '';    
-    var quote = getQuote(this.state.quotes);
+    var quote = '';   
+    console.log(this.state.quotes.length) 
+    var quote = getQuote(this.state.quotes).quote;
+    var author = getQuote(this.state.quotes).author;
     this.setState({
-      quote: this.state.quote
+      quote: quote,
+      author: author
     })
   };
 
@@ -49,12 +52,13 @@ export default class App extends React.Component {
       <div className="container">
         <div className="name">
           <div>
-            <span className="firstname">Stoic Quote Generator</span>
+            {/* <span className="firstname">Stoic Quote Generator</span> */}
             <br />
           </div>
 
         </div>
-        <p>{this.state.quote}</p>
+        <p className="name">{this.state.quote}</p>
+        <div className="firstname">{this.state.author}</div>
         <div className="m-y">
           <button className="btn btn-random" onClick={this._randomAll.bind(this)}>Generate random stoic quote</button>
         </div>
