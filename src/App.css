@@ -4,11 +4,7 @@
   background-color: #fff;
   padding: 50px;
   white-space: pre-line;
-}
-body {
-  font: 12px/20px "Lucida Grande", Tahoma, Verdana, sans-serif;
-  color: #404040;
-  background: #dce1e1;
+  text-align: center;
 }
 
 .name {
@@ -34,8 +30,9 @@ body {
   border: 1px solid transparent;
   border-radius: 0;
   text-transform: uppercase;
-  letter-spacing: .1em;
-  padding: .5em;
+  letter-spacing: .2em;
+  padding: .5em;  
+  margin: 5px;
 }
 
 .btn-copy {
@@ -70,11 +67,17 @@ body {
   margin-top: 50px;
   margin-bottom: 10px;
 }
+/* body {
+  font: 12px/20px "Lucida Grande", Tahoma, Verdana, sans-serif;
+  color: #404040;
+  background: #dce1e1;
+} */
+
 .notepaper {
   position: relative;
   margin: 30px auto;
   padding: 29px 20px 20px 45px;
-  width: 580px;
+  width: 380px;
   line-height: 30px;
   color: #6a5f49;
   text-shadow: 0 1px 1px white;
@@ -83,7 +86,7 @@ body {
   background-image: -moz-radial-gradient(center, cover, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.1) 90%), -moz-repeating-linear-gradient(top, transparent 0%, transparent 29px, rgba(239, 207, 173, 0.7) 29px, rgba(239, 207, 173, 0.7) 30px);
   background-image: -o-radial-gradient(center, cover, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.1) 90%), -o-repeating-linear-gradient(top, transparent 0%, transparent 29px, rgba(239, 207, 173, 0.7) 29px, rgba(239, 207, 173, 0.7) 30px);
   border: 1px solid #c3baaa;
-  border-color: rgba(195, 186, 170, 0.9);
+  border-color: rgba(250, 186, 170, 0.9);
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -121,7 +124,7 @@ body {
 
 .quote {
   font-family: Georgia, serif;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .curly-quotes:before, .curly-quotes:after {
@@ -130,7 +133,7 @@ body {
   height: 30px;
   line-height: 48px;
   font-size: 50px;
-  opacity: .5;
+  opacity: .7;
 }
 
 .curly-quotes:before {

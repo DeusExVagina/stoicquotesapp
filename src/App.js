@@ -48,23 +48,25 @@ export default class App extends React.Component {
   render() {    
     const { quote } = this.state;    
     return (
-      <div className="container">
+      <React.Fragment>
         <div class="notepaper">
           <figure class="quote">
-            <blockquote class="curly-quotes" cite="https://www.youtube.com/watch?v=qYLrc9hy0t0">
+            <blockquote class="curly-quotes">
             {this.state.quote}
             </blockquote>
             <figcaption class="quote-by">— {this.state.author}</figcaption>
           </figure>
         </div>
+        <div className="container">
         <div className="m-y">
           <button className="btn btn-random" onClick={this._randomAll.bind(this)}>Generate random stoic quote</button>
         </div>
         
         <small className="randomize-note">Like this thing?</small>
         <Button name="firstName" onClick="https://keypressingmonkey.com">My Website</Button>
-        <Button name="lastNamePrefix" onClick="https://www.youtube.com/channel/UCMdFN7FUC4HilpDBEw0uvJw">My Youtube</Button>
+        <Button name="firstName" onClick="https://www.youtube.com/channel/UCMdFN7FUC4HilpDBEw0uvJw">My Youtube</Button>
       </div>
+      </React.Fragment>
     )
   };
 }

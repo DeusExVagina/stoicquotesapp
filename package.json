@@ -8,8 +8,11 @@
     "react-dom": "^16.11.0",
     "react-iframe": "^1.8.0",
     "react-native": "^0.61.3",
+    "react-native-webkit-webview": "^0.10.7",
     "react-scripts": "3.2.0",
-    "react-uikit-button": "^2.0.2"
+    "react-uikit-button": "^2.0.2",
+    "webkit": "0.0.0",
+    "webkit-npm": "^3.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
