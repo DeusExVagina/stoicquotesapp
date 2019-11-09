@@ -19,21 +19,22 @@ export default class App extends React.Component {
 
   componentDidMount() {
     fetch("https://raw.githubusercontent.com/DeusExVagina/stoicquotesapp/master/JSONFIles/quotes.json")
-      .then(response => response.json())
+      .then(response => response.json())      
       .then(data => {
-        this.setState({
-          quotes: data.lines
+        this.setState({          
+          quotes: data.quotes
         });
-      });
+        
+      });      
   }
   componentDidUpdate() {
   }
 
   _randomAll() {
     var quote = '';    
-    var quote = getQuote(this.state.orgasmActions);
+    var quote = getQuote(this.state.quotes);
     this.setState({
-      sexaction: this.state.quote
+      quote: this.state.quote
     })
   };
 
